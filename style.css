@@ -1,0 +1,84 @@
+*{
+    font-family: 'Manrope', sans-serif;
+}
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: hsl(218, 23%, 16%);
+}
+.container{
+    width: 500px;
+    background-color: hsl(217deg 19% 38% / 74%);
+    padding: 40px;
+    border-radius: 20px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+span{
+    font-size: 10px;
+    color: hsl(150, 100%, 66%);
+    letter-spacing: 5px;
+}
+blockquote::before, blockquote::after{
+    content: open-quote; 
+    font-size: 40px;
+    color: hsl(193, 38%, 86%);
+    line-height: 0;
+    position: relative;
+    top: 10px;
+    margin: auto 5px;
+}
+blockquote::after{
+    content: close-quote;
+}
+button{
+    cursor: pointer;
+    position: absolute;
+    bottom: -30px;
+    border: none;
+    border-radius: 50%;
+    background-color: hsl(150, 100%, 66%);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+button:hover{
+    box-shadow: 0px 0px 40px hsl(150, 100%, 66%);
+}
+blockquote{
+    color: hsl(193, 38%, 86%);
+    text-align: center;
+    font-size: 24px;
+    transition: 4s;
+    animation: fadeIn 5s;
+}
+.pattern{
+    margin: 20px auto;
+}
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@media screen and (max-width:375px){
+    .container, img{
+        width: 100%;
+    }
+    .container{
+        padding: 30px 10px;
+    }
+    body{
+        padding: 20px;
+    }
+}
